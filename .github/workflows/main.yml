@@ -1,15 +1,15 @@
 name: 001-WORKFLOW
 on:
   push:
-    branches: [main, dev]
+    branches: [main]
   pull_request:
-    branches: [main, dev]
+    branches: [main]
 
   workflow_dispatch:
 
 jobs:
   build-and-release:
-    runs-on: ubuntu-latest, windows-latest, macos
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Run a one-line script
